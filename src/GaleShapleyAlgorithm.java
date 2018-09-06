@@ -3,7 +3,7 @@
  * Time： 9/6/2018
  *
  * Correspond to the algorithm state in page 6,
- * all grey comments are from the book.
+ * all /* comments are from the book.
  */
 
 import java.util.Collections;
