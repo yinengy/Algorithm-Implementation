@@ -172,5 +172,24 @@ public class GaleShapleyAlgorithm {
             }
             System.out.println();
         }
+
+        String[] M2 = {"m1", "m2", "m3"};
+        String[] W2 = {"w1", "w2", "w3"};
+        //in the same order of m
+        String[][] mPref2 = {{"w2", "w1", "w3"},
+                {"w1", "w2", "w3"},
+                {"w1", "w3", "w2"}};
+
+        String[][] wPref2 = {{"m1", "m3", "m2"}, // change m3 and m2's order lead to better off, which correspond to Capter 1 exercise 8
+                {"m2", "m1", "m3"},
+                {"m1", "m2", "m3"}};
+
+        String[][] S2 = StableMatching(M2, W2, mPref2, wPref2);
+        for (String[] value : S2) {
+            for (String var : value) {
+                System.out.print(var + " ");
+            }
+            System.out.println();
+        }
     }
 }
