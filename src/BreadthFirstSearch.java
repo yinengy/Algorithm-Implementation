@@ -45,17 +45,17 @@ public class BreadthFirstSearch {
         AdjacencyList tree = new AdjacencyList(graph.getNumV()); // use AdjacencyList to repent a new tree
 
         /* While L[i] is not empty */
-        while (!L[i].isEmpty()) {
+        while (!L[i].isEmpty()) { // O(n) to set up L
             /* Initialize an empty list L[i + 1] */
             L[i + 1] = new LinkedBlockingQueue<>();
 
             /* For each node u ∈ L[i] */
-            while (!L[i].isEmpty()) {
+            while (!L[i].isEmpty()) { // O(m) for consider all edges in all loops
                 /* Consider each edge (u, v) incident to u */
                 int u = L[i].remove();
                 LinkedList<Integer> edges = graph.getEdges(u);
 
-                for (int v : edges) { // cast object to int
+                for (int v : edges) { // O(degree(n))
                     /* If Discovered[v] = false then */
                     if (!Discovered[v]) {
                         /* Set Discovered[v] = true */
@@ -74,6 +74,7 @@ public class BreadthFirstSearch {
             i++;
         }/* Endwhile */
 
+        // all in all, O(n+m)
         return tree;
     }
 
