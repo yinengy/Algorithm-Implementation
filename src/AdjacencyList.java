@@ -20,7 +20,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 class AdjacencyList {
-
+    private int numV;
     private LinkedList[] list; // list of pointer to a linked list that will store incident edges of every V
 
     /**
@@ -30,6 +30,7 @@ class AdjacencyList {
      * @param numV the number of vertices in the graph
      */
     public AdjacencyList(int numV) {
+        this.numV = numV;
         list = new LinkedList[numV];
         for (int i = 0; i < numV; i++) {
             list[i] = new LinkedList<Integer>();
@@ -84,9 +85,17 @@ class AdjacencyList {
         return s.toString();
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
-        AdjacencyList graph = new AdjacencyList(8);
-        graph.addFromCSV("test\\graph.csv");
-        System.out.println(graph);
+    public int getNumV() {
+        return numV;
+    }
+
+    /**
+     * get edges
+     *
+     * @param V the vertex that want to check
+     * @return a list that contains all incident edge of V
+     */
+    public LinkedList<Integer> getEdges(int V) {
+        return list[V - 1];
     }
 }
