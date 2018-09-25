@@ -6,3 +6,4 @@ The Java implementation of the algorithm in the textbook  "[Algorithm Design](ht
 * *[Adjacency List](src/AdjacencyList.java)* - a way to represent graph, support the implement of BFS and DFS. 9/22/2018
 * *[Breadth-First Search](src/BreadthFirstSearch.java)* - BFS for graph traversal. Chapter 3.3, 9/22/2018
 * *[Depth-First Search](src/DepthFirstSearch.java)* - DFS for graph traversal. Chapter 3.3, 9/22/2018
+* *[Find Topological Ordering](src/FindTopologicalOrdering.java)*  - show the topological ordering of a DAG. Chapter 3.6, 9/24/2018
