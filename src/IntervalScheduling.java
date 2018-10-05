@@ -21,7 +21,7 @@ public class IntervalScheduling {
      */
     public static int[] Scheduling(int[][] request, int timelimit) {
         /* Initially let R be the set of all requests, and let A be empty */
-        int[] A = new int[timelimit]; //initialize A
+        int[] A = new int[timelimit+1]; //initialize A
 
         // a boolean array to represent all request's condition
         boolean[] R = new boolean[request.length + 1]; //initial false
@@ -81,7 +81,7 @@ public class IntervalScheduling {
                 {7, 6, 9},
                 {8, 8, 10}};
 
-        int[] schedule = Scheduling(interval, 11);
+        int[] schedule = Scheduling(interval, 10);
         for (int n : schedule) {
             System.out.print(n + " ");
         }
