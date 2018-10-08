@@ -89,7 +89,7 @@ public class DijkstrasAlgorithm {
                d'(v) = min_{e=(u, v):u∈S}d(u) + l_e is as small as possible
              */
 
-            int u = pq.remove().getId(); // O(logn) to delete in PQ
+            int u = pq.poll().getId(); // O(logn) to delete in PQ
             LinkedList<Integer> edges = G.getEdges(u);
             for (int v : edges) { //O(degree n) per loop, totally O(m)
                 if (d[u].getKey() + l[u][v] < d[v].getKey()) {
