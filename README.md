@@ -13,3 +13,4 @@ Java implementation of  [Algorithm Design](https://www.amazon.com/Algorithm-Desi
 * *[Interval Scheduling](src/IntervalScheduling.java)* - interval scheduling problem. Section 4.1, 10/5/2018
 * *[Interval Partitioning](src/IntervalPartitioning.java)* - interval partitioning problem (interval coloring problem). Section 4.1, 10/5/2018
 * *[Minimizing Lateness](src/MinimizingLateness.java)* - scheduling to minimize lateness. Section 4.2, 10/5/2018
+* *[Dijkstra's Algorithm](src/DijkstrasAlgorithm.java)* - single-pair shortest path problem. Section 4.4, 10/7/2018
