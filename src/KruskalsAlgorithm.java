@@ -15,17 +15,49 @@ public class KruskalsAlgorithm {
     /**
      * main algorithm
      *
-     * @param G a graph in AdjacencyList form
+     * @param G    a graph in AdjacencyList form
      * @param cost a 2-D list in format {u, v, cost}
-     * @param s the node to start (it should be able to reach all node)
+     * @param s    the node to start (it should be able to reach all node)
      * @return minimum spanning tree
      */
     public static AdjacencyList MST(AdjacencyList G, int[][] cost, int s) {
-        //sort the edges by cost in descending order, O(mlogn)
-        Arrays.sort(cost, Comparator.comparingInt(array -> -array[2]));
-        return null;
+        //sort the edges by cost in ascending order, O(mlogn)
+        Arrays.sort(cost, Comparator.comparingInt(array -> array[2]));
+
+        // use union-find data structure to improve time complexity
+        UnionFind set = new UnionFind(G.getNumV());
+
+        // a array to store the parent of each node in the tree;
+        int[] parent = new int[G.getNumV() + 1];
+
+        // create tree from parent[], O(n)
+        AdjacencyList Tree = new AdjacencyList(G.getNumV());
+
+        for (int[] edge : cost) {
+            // union the two set if they are not in the same connected component
+            if (set.find(edge[0]) != set.find(edge[1])) {
+                set.union(set.find(edge[0]), set.find(edge[1]));
+
+                parent[edge[0]] = edge[1]; // no circle was created, so add them to tree
+                Tree.addEdge(edge[0], edge[1]);
+                Tree.addEdge(edge[1], edge[0]);
+            }
+        }
+
+
+//        for (int i = 1; i < parent.length; i++) {
+//            if (parent[i] != 0) {
+//                Tree.addEdge(parent[i], i);
+//                Tree.addEdge(i, parent[i]);
+//            }
+//        }
+
+        return Tree;
     }
 
+    /**
+     * test
+     */
     public static void main(String[] args) throws FileNotFoundException {
         int[][] l = {{0, 1, 2, 3, 4, 5, 6, 7, 8},
                 {1, 0, 5, 0, 0, 9, 0, 0, 8},
@@ -39,9 +71,9 @@ public class KruskalsAlgorithm {
         };
 
         AdjacencyList graph = new AdjacencyList(8);
-        graph.addFromCSV("test\\DirectedGraph.csv");
+        graph.addFromCSV("test\\MST.csv");
         System.out.println(graph);
-        AdjacencyList tree = MST(graph, testHelper(l, 32), 1);
+        AdjacencyList tree = MST(graph, testHelper(l, 16), 1);
         System.out.println(tree);
     }
 
@@ -49,7 +81,7 @@ public class KruskalsAlgorithm {
      * a helper function to convert origin adjacency matrix to a list of edges
      */
     public static int[][] testHelper(int[][] l, int edgesNum) {
-        int[][] edges = new int[edgesNum][2];
+        int[][] edges = new int[edgesNum][3];
         int counter = 0;
 
         for (int i = 1; i < l.length; i++) {

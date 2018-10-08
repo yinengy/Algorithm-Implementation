@@ -40,6 +40,22 @@ public class UnionFind {
         }
     }
 
+    /**
+     * create union-find by the number of node rather than a int[]
+     */
+    public UnionFind(int num) {
+        int[] temp = new int[num];
+        for (int i = 0; i < num; i++) {
+            temp[i] = i+1;
+        }
+
+        set = new Node[num + 1];
+
+        for (int s : temp) {
+            set[s] = new Node(s); // each in its own set
+        }
+    }
+
 
     /**
      * make union of two sets, O(1)

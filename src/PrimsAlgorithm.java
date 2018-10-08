@@ -87,9 +87,8 @@ public class PrimsAlgorithm {
                 if (!S[v] & l[u][v] < d[v].getKey()) { // this is different to Dijkstra
                     // update key in PQ
                     pq.remove(d[v]); // O(n)
-                    Node new_v = new Node(v);
-                    new_v.changeKey(l[u][v]);
-                    pq.add(new_v);
+                    d[v].changeKey(l[u][v]);
+                    pq.add(d[v]);
                     // update parent
                     parent[v] = u;
 
