@@ -44,14 +44,6 @@ public class KruskalsAlgorithm {
             }
         }
 
-
-//        for (int i = 1; i < parent.length; i++) {
-//            if (parent[i] != 0) {
-//                Tree.addEdge(parent[i], i);
-//                Tree.addEdge(i, parent[i]);
-//            }
-//        }
-
         return Tree;
     }
 
