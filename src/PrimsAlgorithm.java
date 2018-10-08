@@ -51,6 +51,11 @@ public class PrimsAlgorithm {
         }
     }
 
+    /**
+     * main algorithm
+     *
+     * input is similar to Dijkstra's Algorithm
+     */
     public static AdjacencyList MST(AdjacencyList G, int[][] l, int s) {
         // initial a priority queue
         PriorityQueue<Node> pq = new PriorityQueue<>();
@@ -119,7 +124,7 @@ public class PrimsAlgorithm {
 
 
         AdjacencyList graph = new AdjacencyList(8);
-        graph.addFromCSV("test\\DirectedGraph.csv");
+        graph.addFromCSV("test\\MST.csv");
         System.out.println(graph);
         AdjacencyList tree = MST(graph, l, 1);
         System.out.println(tree);

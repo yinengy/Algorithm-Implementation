@@ -104,7 +104,7 @@ public class DijkstrasAlgorithm {
         // create tree from parent[], O(n)
         AdjacencyList pathTree = new AdjacencyList(G.getNumV());
         for (int i = 1; i < parent.length; i++) {
-            if (i != s) {
+            if (parent[i] != 0) {
                 pathTree.addEdge(parent[i], i);
             }
         }
@@ -128,7 +128,7 @@ public class DijkstrasAlgorithm {
         AdjacencyList graph = new AdjacencyList(8);
         graph.addFromCSV("test\\DirectedGraph.csv");
         System.out.println(graph);
-        AdjacencyList tree = shortestPathTree(graph, l, 1);
+        AdjacencyList tree = shortestPathTree(graph, l, 2);
         System.out.println(tree);
     }
 }
