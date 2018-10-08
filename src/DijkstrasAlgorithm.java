@@ -128,7 +128,7 @@ public class DijkstrasAlgorithm {
         AdjacencyList graph = new AdjacencyList(8);
         graph.addFromCSV("test\\DirectedGraph.csv");
         System.out.println(graph);
-        AdjacencyList tree = shortestPathTree(graph, l, 2);
+        AdjacencyList tree = shortestPathTree(graph, l, 1);
         System.out.println(tree);
     }
 }
