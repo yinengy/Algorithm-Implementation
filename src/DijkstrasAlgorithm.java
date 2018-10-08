@@ -1,6 +1,6 @@
 /*
  * Aurthur：@yinengy
- * Time： 10/5/2018
+ * Time： 10/7/2018
  *
  * Correspond to the algorithm state in page 138,
  * all /* comments are from the book.
