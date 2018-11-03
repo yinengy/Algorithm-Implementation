@@ -25,10 +25,10 @@ public class SegmentedLeastSquares {
      */
     public static void AlgorithmCall() {
         regression = new double[points.length + 1][points.length + 1][2];
-        e = new double[points.length + 1][points.length + 1];
+        e = new double[points.length + 1][points.length + 1]; // O(n^2) space
 
-        M = computeOpt(points.length); // O(n^2)
-        FindSegements(points.length);
+        M = computeOpt(points.length); // O(n^3)
+        FindSegements(points.length); // O(n)
     }
 
     public static double[][] computeOpt(int n) {
@@ -42,7 +42,7 @@ public class SegmentedLeastSquares {
         for (int i = 1; i <= n; i++) {
             for (int j = i; j <= n; j++) {
                 /* Compute the least squares error ei, j for the segment pi,. . . , p */
-                e[i][j] = LeastSquaresError(i, j);
+                e[i][j] = LeastSquaresError(i, j); // O(n) per time.
             }
         } /* Endfor */
         /* For j = 1, 2, . . . , n */
