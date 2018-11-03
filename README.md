@@ -14,3 +14,6 @@ Java implementation of  [Algorithm Design](https://www.amazon.com/Algorithm-Desi
 * *[Interval Partitioning](src/IntervalPartitioning.java)* - interval partitioning problem (interval coloring problem). Section 4.1, 10/5/2018
 * *[Minimizing Lateness](src/MinimizingLateness.java)* - scheduling to minimize lateness. Section 4.2, 10/5/2018
 * *[Dijkstra's Algorithm](src/DijkstrasAlgorithm.java)* - single-pair shortest path problem. Section 4.4, 10/7/2018
+* *[Prim's Algorithm](src/PrimsAlgorithm.java)* - minimum spanning tree problem. Section 4.5, 10/8/2018
+* *[Union-Find Data Structure](src/UnionFind.java)* - help to implement Kruskal's Algorithm. Section 4.6, 10/8/2018
+* *[Kruskal's Algorithm](src/KruskalsAlgorithm.java)* - another algorithm to solve minimum spanning tree problem. Section 4.6, 10/8/2018
