@@ -17,3 +17,6 @@ Java implementation of  [Algorithm Design](https://www.amazon.com/Algorithm-Desi
 * *[Prim's Algorithm](src/PrimsAlgorithm.java)* - minimum spanning tree problem. Section 4.5, 10/8/2018
 * *[Union-Find Data Structure](src/UnionFind.java)* - help to implement Kruskal's Algorithm. Section 4.6, 10/8/2018
 * *[Kruskal's Algorithm](src/KruskalsAlgorithm.java)* - another algorithm to solve minimum spanning tree problem. Section 4.6, 10/8/2018
+### Dynamic Programming
+* *[Weighted Interval Scheduling](src/WeightedIntervalScheduling.java)* - a version of interval scheduling problem with weight. Section 6.1, 11/3/2018
+* *[Segmented Least Squares](src/SegmentedLeastSquares.java)* - segmented least squares problem. Section 6.3, 11/3/2018
