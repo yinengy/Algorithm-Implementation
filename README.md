@@ -20,7 +20,7 @@ Java implementation of  [Algorithm Design](https://www.amazon.com/Algorithm-Desi
 ### Dynamic Programming
 * *[Weighted Interval Scheduling](src/WeightedIntervalScheduling.java)* - a version of interval scheduling problem with weight. Section 6.1, 11/3/2018
 * *[Segmented Least Squares](src/SegmentedLeastSquares.java)* - segmented least squares problem. Section 6.3, 11/3/2018
-* *[Knapsack Problem](src/Knapsack.java)* - a pseudo-polynomial time algorithm for Knapsack Problem. Section 6.3, 11/4/2018
+* *[Knapsack Problem](src/Knapsack.java)* - a pseudo-polynomial time algorithm for Knapsack Problem. Section 6.4, 11/4/2018
 
 
 
