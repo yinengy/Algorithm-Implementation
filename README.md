@@ -22,4 +22,5 @@ Java implementation of  [Algorithm Design](https://www.amazon.com/Algorithm-Desi
 * *[Segmented Least Squares](src/SegmentedLeastSquares.java)* - segmented least squares problem. Section 6.3, 11/3/2018
 * *[Knapsack Problem](src/Knapsack.java)* - a pseudo-polynomial time algorithm for Knapsack Problem. Section 6.4, 11/4/2018
 * *[Sequence Alignment Problem](src/SequenceAlignment.java)* - an algorithm for Sequence Alignment Problem. Section 6.6, 11/4/2018
+* *[Bellman-Ford Algorithm](src/BellmanFordAlgorithm.java)* - an algorithm for shortest path problem (with negative edges). Section 6.8, 11/10/2018
 
