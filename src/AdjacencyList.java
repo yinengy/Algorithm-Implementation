@@ -1,17 +1,10 @@
 /*
-
- * Aurthur：@yinengy
-
+ * Code by：@yinengy
  * Time： 9/22/2018
-
  *
-
  * An implement of Adjacency List that can represent graph.
-
  * This will be used in the implement of BFS and DFS
-
  * Notice: All the method won't handle bad inputs
-
  */
 
 import java.io.File;

@@ -1,5 +1,5 @@
 /*
- * Aurthur：@yinengy
+ * Code by：@yinengy
  * Time： 11/4/2018
  *
  * Correspond to the algorithm state on page 282,

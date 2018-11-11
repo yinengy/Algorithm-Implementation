@@ -1,15 +1,9 @@
 /*
-
- * Aurthur：@yinengy
-
+ * Code by：@yinengy
  * Time： 9/22/2018
-
  *
-
  * Correspond to the algorithm state in page 93,
-
  * all /* comments are from the book.
-
  */
 
 import java.io.FileNotFoundException;
