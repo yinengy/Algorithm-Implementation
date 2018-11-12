@@ -12,7 +12,7 @@ import java.io.FileNotFoundException;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-class AdjacencyList {
+class AdjacencyList implements Cloneable {
     private int numV;
     private LinkedList[] list; // list of pointer to a linked list that will store incident edges of every V
 
@@ -90,5 +90,49 @@ class AdjacencyList {
      */
     public LinkedList<Integer> getEdges(int V) {
         return list[V - 1];
+    }
+
+    /**
+     * get a deep copy of the AdjacencyList
+     */
+    public AdjacencyList clone() {
+        AdjacencyList toClone = new AdjacencyList(this.numV);
+
+        for (int x = 0; x < this.list.length; x++) {
+            for (Object o : this.list[x]) {
+                toClone.list[x].addLast(o);
+            }
+        }
+
+        return toClone;
+    }
+
+    /**
+     * delete edge from s to w, if such edge not exist, return false.
+     * O(degree(s))
+     *
+     * @param s the start node
+     * @param w the end node
+     * @return success delete the not
+     */
+    public boolean deleteEdge(int s, int w) {
+        if (!list[s - 1].remove((Integer) w)) {
+            return false;
+        }
+
+        return list[s - 1].remove((Integer) w) || deleteEdge(s, w);
+    }
+
+    /**
+     * return a tree with reverse edges
+     */
+    public AdjacencyList reverse() {
+        AdjacencyList newTree = new AdjacencyList(this.numV);
+        for (int v = 0; v < this.list.length; v++) {
+            for (Object w : this.list[v]) {
+                newTree.addEdge((int) w, v + 1);
+            }
+        }
+        return newTree;
     }
 }
