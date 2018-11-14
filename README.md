@@ -24,4 +24,6 @@ Java implementation of  [Algorithm Design](https://www.amazon.com/Algorithm-Desi
 * *[Sequence Alignment Problem](src/SequenceAlignment.java)* - an algorithm for Sequence Alignment Problem. Section 6.6, 11/4/2018
 * *[Bellman-Ford Algorithm](src/BellmanFordAlgorithm.java)* - an algorithm for shortest path problem (with negative edges). Section 6.8, 11/10/2018
 ### Network Flow
-* *[Ford-Fulkerson Algorithm](src/FordFulkersonAlgorithm.java)* - find max flow in graph. Section 7.1, 11/11/2018
+* *[Ford-Fulkerson Algorithm](src/FordFulkersonAlgorithm.java)* - find max flow in graph. Section 7.1 , 11/11/2018.  
+Update: two versions with improved time complexity by shortest augmenting path or capacity scaling. Section 7.3, 11/14/2018.
+
