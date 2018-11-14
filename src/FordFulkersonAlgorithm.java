@@ -13,7 +13,10 @@ import java.util.ListIterator;
 public class FordFulkersonAlgorithm {
 
     /**
-     * main algorithm, space O(n^2), time O(mC)
+     * main algorithm, space O(n^2), time seems to be O(mC).
+     * But it has been proved that when choose BFS rather than DFS,
+     * the max iteration will be O(mn) rather than O(C),
+     * thus overall time complexity should be O(n*m^2)
      *
      * @param G        a directed graph
      * @param s        source
@@ -35,7 +38,7 @@ public class FordFulkersonAlgorithm {
         /* While there is an s-t path in the residual graph Gf */
         /* Let P be a simple s-t path in Gf */
         LinkedList<Integer> P = findPath(Gf, s, t);
-        while (P != null && P.size() != 0) { // when c is int, at most C(max flow) iteration
+        while (P != null && P.size() != 0) { // at most O(mn) rather than O(C)
             /* f' = augment(f, P) */
             /* Update f to be f' */
             int[][] fprime = augment(f, P, isBackward, capacity); // O(m)
@@ -132,7 +135,7 @@ public class FordFulkersonAlgorithm {
     public static LinkedList<Integer> findPath(AdjacencyList G, int s, int t) {
         LinkedList<Integer> stPath = new LinkedList<>();
 
-        AdjacencyList pathTree = DepthFirstSearch.DFS(G, s); // O(m+n)
+        AdjacencyList pathTree = BreadthFirstSearch.BFS(G, s); // O(m+n)
 
         pathTree = pathTree.reverse();
 

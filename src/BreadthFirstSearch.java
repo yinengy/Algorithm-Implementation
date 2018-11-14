@@ -28,7 +28,7 @@ public class BreadthFirstSearch {
         Discovered[s] = true;
 
         /* Initialize L[0] to consist of the single element s */
-        Queue<Integer>[] L = new Queue[graph.getNumV()]; // store all pointers to those layers
+        Queue<Integer>[] L = new Queue[graph.getNumV()+1]; // store all pointers to those layers
         L[0] = new LinkedBlockingQueue<>();
         L[0].add(s);
 
