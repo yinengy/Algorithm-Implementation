@@ -54,9 +54,10 @@ class AdjacencyList implements Cloneable {
         scan.nextLine(); // skip the first line which is the number of all V
         while (scan.hasNextLine()) {
             String nl = scan.nextLine();
-            nl = nl.replaceAll("[^\\w]", "");
-            for (int i = 1; i < nl.length(); i++) { // skip the first column which is number of V
-                if (nl.charAt(i) == '1') {
+            String[] temp = nl.split("[^\\w]");
+            for (int i = 1; i <= numV; i++) { // skip the first column which is number of V
+                int value = Integer.parseInt(temp[i]);
+                if (value > 0 ) {
                     addEdge(currentV, i);
                 }
             }
