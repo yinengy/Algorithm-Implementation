@@ -9,6 +9,7 @@ Java implementation of  [Algorithm Design](https://www.amazon.com/Algorithm-Desi
 * *[Breadth-First Search](src/BreadthFirstSearch.java)* - BFS for graph traversal. Section 3.3, 9/22/2018
 * *[Depth-First Search](src/DepthFirstSearch.java)* - DFS for graph traversal. Section 3.3, 9/22/2018
 * *[Find Topological Ordering](src/FindTopologicalOrdering.java)*  - show the topological ordering of a DAG. Section 3.6, 9/24/2018
+* *[Bipartite Graph](src/BipartiteGraph.java)*  - generate, label, and test a bipartite graph. To help the implementation of the Bipartite Matching Problem. Section 3.4, 11/14/2018
 ### Greedy Algorithm
 * *[Interval Scheduling](src/IntervalScheduling.java)* - interval scheduling problem. Section 4.1, 10/5/2018
 * *[Interval Partitioning](src/IntervalPartitioning.java)* - interval partitioning problem (interval coloring problem). Section 4.1, 10/5/2018
