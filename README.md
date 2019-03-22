@@ -1,7 +1,6 @@
-# Summary
-Java implementation of  [Algorithm Design](https://www.amazon.com/Algorithm-Design-Kleinberg-published-Addison-Wesley/dp/B00E31S1LW/ref=sr_1_5?ie=UTF8&qid=1537642967&sr=8-5&keywords=Algorithm+Design) (*Jon Kleinberg and Éva Tardos*, 1st Edition, ISBN: 9780321295354).
-
-# List of Finished Algorithms
+# Algorithms in [Algorithm Design](https://www.amazon.com/Algorithm-Design-Kleinberg-published-Addison-Wesley/dp/B00E31S1LW/ref=sr_1_5?ie=UTF8&qid=1537642967&sr=8-5&keywords=Algorithm+Design)
+## Summary
+Java implementation of  Algorithm Design (*Jon Kleinberg and Éva Tardos*, 1st Edition, ISBN: 9780321295354).
 ### Introduction
 * *[Gale-Shapley](src/GaleShapleyAlgorithm.java)* - for Stable Matching Problem. Section 1.1, 9/6/2018
 ### Graphs
@@ -28,5 +27,7 @@ Java implementation of  [Algorithm Design](https://www.amazon.com/Algorithm-Desi
 * *[Ford-Fulkerson Algorithm](src/FordFulkersonAlgorithm.java)* - find max flow in graph. Section 7.1, 11/11/2018.  
 Update: two versions with improved time complexity by shortest augmenting path or capacity scaling. Section 7.3, 11/14/2018.
 * *[Bipartite Matching](src/BipartiteMatching.java)* - use max flow to find matching in a bipartite graph. Section 7.5, 11/15/2018. 
-### Others
+
+# Others
+personal implement of some useful algorithms.
 * *[Trie Data Structure](cpp/Trie/Trie.cpp)* - use trie to speedup looking up word and finding prefixes. C++, 3/22/2019
