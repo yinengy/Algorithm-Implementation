@@ -29,5 +29,5 @@ Update: two versions with improved time complexity by shortest augmenting path o
 * *[Bipartite Matching](src/BipartiteMatching.java)* - use max flow to find matching in a bipartite graph. Section 7.5, 11/15/2018. 
 
 # Others
-personal implement of some useful algorithms.
+personal implementation of some useful algorithms and data structure.
 * *[Trie Data Structure](cpp/Trie/Trie.cpp)* - use trie to speedup looking up word and finding prefixes. C++, 3/22/2019
