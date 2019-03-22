@@ -28,3 +28,4 @@ Java implementation of  [Algorithm Design](https://www.amazon.com/Algorithm-Desi
 * *[Ford-Fulkerson Algorithm](src/FordFulkersonAlgorithm.java)* - find max flow in graph. Section 7.1, 11/11/2018.  
 Update: two versions with improved time complexity by shortest augmenting path or capacity scaling. Section 7.3, 11/14/2018.
 * *[Bipartite Matching](src/BipartiteMatching.java)* - use max flow to find matching in a bipartite graph. Section 7.5, 11/15/2018. 
+### Others
