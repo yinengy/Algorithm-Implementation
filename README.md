@@ -29,3 +29,4 @@ Java implementation of  [Algorithm Design](https://www.amazon.com/Algorithm-Desi
 Update: two versions with improved time complexity by shortest augmenting path or capacity scaling. Section 7.3, 11/14/2018.
 * *[Bipartite Matching](src/BipartiteMatching.java)* - use max flow to find matching in a bipartite graph. Section 7.5, 11/15/2018. 
 ### Others
+* *[Trie Data Structure](cpp/Trie/Trie.cpp)* - us trie to speedup word look up and find prefixes. C++, 3/22/2019
