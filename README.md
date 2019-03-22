@@ -1,6 +1,6 @@
 # Algorithms in [Algorithm Design](https://www.amazon.com/Algorithm-Design-Kleinberg-published-Addison-Wesley/dp/B00E31S1LW/ref=sr_1_5?ie=UTF8&qid=1537642967&sr=8-5&keywords=Algorithm+Design)
 ## Summary
-Java implementation of  Algorithm Design (*Jon Kleinberg and Éva Tardos*, 1st Edition, ISBN: 9780321295354).
+Personal implementation in Java of Algorithm Design (*Jon Kleinberg and Éva Tardos*, 1st Edition, ISBN: 9780321295354). 
 ### Introduction
 * *[Gale-Shapley](src/GaleShapleyAlgorithm.java)* - for Stable Matching Problem. Section 1.1, 9/6/2018
 ### Graphs
