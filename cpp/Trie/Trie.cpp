@@ -11,7 +11,7 @@ public:
     Trie() : root(new node('0')) {}
 
     ~Trie() {
-        deletechild(root);
+        delete root;
     }
 
     // insert a word to the tree, and add index to the node of the word
@@ -68,6 +68,11 @@ private:
 
         node() : chr('0') {}
 
+        ~node() {
+            for (auto & i : child) {
+                delete i.second;
+            }
+        }
 
         char chr;
         unordered_map<char, node *> child;
@@ -91,22 +96,6 @@ private:
         }
 
     }
-
-    // delete nodes by postorder traverse
-    void deletechild(node * trav) {
-        if (trav->child.size() == 0) {
-            delete trav;
-            trav = nullptr;
-            return;
-        }
-
-        for (auto & n : trav->child) {
-            deletechild(n.second);
-        }
-
-        delete trav;
-        trav = nullptr;
-    }  
 };
 
 // replace words in the sentence to its prefixes
